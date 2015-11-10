@@ -1,0 +1,46 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab_DOM1
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab DOM1</title>
+</head>
+<body>
+	<div id = "main">
+		<p>This p will display</p>
+		<h3>This h3 will display</h3>
+		<h3>This other h3 will display</h3>
+		<p>This other p will display</p>
+	</div>
+
+	
+	
+	<div>
+		<h3>this will not display</h3>
+		<p>not this one</p>
+		<h3>not this one either</h3>
+		<p>nope</p>
+	</div>
+
+	<p id = "demop"></p>
+	<p id = "demoh3"></p>
+	
+	<script>
+		var x = document.getElementById("main");
+		var y = x.getElementsByTagName("p");
+		var z = x.getElementsByTagName("h3");
+		var pdemo = document.getElementById("demop");
+		var h3demo = document.getElementById("demoh3");
+		for (var i = 0; i<y.length;i++){
+			pdemo.innerHTML += "<br>" + y[i].innerHTML + "</br>";
+		}
+		for (var i = 0; i<z.length;i++){
+			h3demo.innerHTML += "<br>" + z[i].innerHTML + "</br>";
+		}
+
+	</script>
+</body>
+</html>

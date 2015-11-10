@@ -1,0 +1,49 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab_JS_OOP2
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab_JS_OOP2</title>
+</head>
+<body>
+	<h1>JavaScript OOP2</h1>
+	<p id="lion1"></p>
+	<p id="lion1Meal"></p>
+	<p id="lion2"></p>
+	<p id="lion2Meal"></p>
+
+
+	<script type="text/javascript">
+	function Lion(color,weight,weight_gain_per_meal,name){
+		this.color = color;
+		this.weight = weight;
+		this.weight_gain_per_meal = weight_gain_per_meal;
+		this.name = name;
+
+		this.hunt = function(prey_type,prey_weight){
+			this.weight +=this.weight_gain_per_meal;
+			var string = "The lion hunted a " + prey_weight + "lb " + prey_type;
+			return string;
+		};
+		this.printAll = function(){
+			var string = "Name: " + this.name + "<br>"
+			 + "Color: " + this.color + "<br>"
+			 + "Prey Per Meal: " + this.weight_gain_per_meal + "<br>"
+			 + "Weight: " + this.weight + "<br>";
+			return string;
+		};
+	}
+
+	var lion1 = new Lion("White", 400, 5, "lion1");
+	var lion2 = new Lion("Tan", 500, 6, "lion2" );
+
+	document.getElementById("lion1").innerHTML = lion1.printAll();
+	document.getElementById("lion2").innerHTML = lion2.printAll();
+	document.getElementById("lion1Meal").innerHTML = lion1.hunt('Turkey',30);
+	document.getElementById("lion2Meal").innerHTML = lion2.hunt('Zebra', 100);
+	</script>
+</body>
+</html>

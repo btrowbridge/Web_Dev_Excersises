@@ -1,0 +1,40 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab_JS_GUI
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab_JS_GUI</title>
+</head>
+<body>
+
+	<form id  = "frm1">
+		Num 1<input type = "number" name = "num1" value = "2"><br>
+		Num 2<input type = "number" name = "num2" value = "3"><br><br>
+  		<input type = "submit" value = "Submit"> 
+	</form>
+
+	<button onclick = "myFunction()">Calculate</button>
+
+	<p id = "demo"></p>
+
+
+	<script>
+		function myFunction(){
+			var x = document.getElementById('frm1');
+			var result = 1;
+
+			
+			result = parseInt(x.elements[0].value) * parseInt(x.elements[1].value);
+			
+
+			
+			
+			document.getElementById('demo').innerHTML = result;
+		}
+	</script>
+
+</body>
+</html>

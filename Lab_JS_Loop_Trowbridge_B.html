@@ -1,0 +1,25 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab_JS_Loop
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab_JS_Loop</title>
+</head>
+<body>
+	<p id ="demo"> 3^i </p>
+	<script type="text/javascript">
+		var r = prompt("Input one positive integer", "")
+
+		var series = 0
+		for(var i = 0; i<=r;i++){
+			series+= Mathf.pow(3,i);
+		}
+		document.findItemWithTag("demo").innerHTML = series;
+
+	</script>
+
+</body>
+</html>

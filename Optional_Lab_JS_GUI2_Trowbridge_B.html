@@ -1,0 +1,48 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab_JS_GUI2 OPTIONAL
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab_JS_GUI2</title>
+</head>
+<body>
+
+	<form id  = "frm1"> Series <br>
+		base<input type = "number" name = "base" value = "2"><br>
+		length<input type = "number" name = "length" value = "3"><br><br>
+		result<input type = "number" name = "result"><br><br>
+  		<input type = "submit" value = "Submit"> 
+	</form>
+
+	<button onclick = "myFunction()">Calculate</button>
+
+	<p id = "demo"></p>
+
+
+	<script>
+		function myFunction(){ // Epsilon(r^n) from n = 0 to n = k
+			var x = document.getElementById('frm1');
+			var result = 1;
+			var r = parseInt(x.elements[0].value);
+			var k = parseInt(x.elements[1].value);
+			for(var i = 0; i < k; i++){
+				var partialSum = r;
+
+				for (var j = 0; j < i; j ++ ){
+					partialSum = partialSum * r;
+				}
+
+				result += partialSum;
+			}
+
+			
+			
+			x.elements[2].value = result;
+		}
+	</script>
+
+</body>
+</html>

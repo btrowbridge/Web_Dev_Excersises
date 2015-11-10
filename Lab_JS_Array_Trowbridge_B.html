@@ -1,0 +1,43 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab JS Array
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab JS Array</title>
+</head>
+<body>
+
+<p>Listing fruit from an array using prompts</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+
+
+function myFunction() {
+    var fruits = [];
+    var input = " "
+	while(input){
+		var input= prompt("Type a name of a fruit.Click cancel to exit.", "FRUIT_NAME");
+		if (input){
+			fruits[fruits.length] = input;
+		}
+	}
+
+    var text = "<ul>";
+    
+    for (var i = 0; i < fruits.length; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+Bradley Trowbridge
+COP 3438 - 01
+Lab_Event1
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab_Event1</title>
+</head>
+<body>
+	<div onmouseover="mOver(this)" onmouseout ="mOut(this)" style ="background-color:red;width:200px;height:100;padding:20px;">Begin</div>
+
+	<button id ="myBtn" style ="background-color:blue;width:200px;height:100;padding:20px;">Click Me</div>
+
+	<script>
+		function mOver(obj){
+			obj.innerHTML = "End";
+		}
+		function mOut(obj){
+			obj.innerHTML = "Begin";
+		}
+		function mClick(obj){
+			if (obj.innerHTML == "Click Me"){
+				obj.innerHTML = "Clicked";
+			}
+			else{
+				obj.InnerHTML = "Click Me";
+			}
+		}
+		document.findElementById('myBtn').onclick = mClick(this);
+	</script>
+
+</body>
+</html>
